@@ -1,6 +1,6 @@
 {
   "name": "configs-overload",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Load configs with ease",
   "main": "index.js",
   "directories": {
