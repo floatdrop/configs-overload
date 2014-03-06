@@ -1,4 +1,4 @@
-/*global describe, it, beforeEach*/
+/*global describe, it, beforeEach, afterEach*/
 /*jshint expr:true*/
 
 'use strict';
@@ -6,7 +6,8 @@
 var path = require('path'),
     expect = require('chai').expect;
 
-var FIXTURES_DIR = path.join(__dirname, 'fixtures');
+var FIXTURES_DIR = path.join(__dirname, 'fixtures'),
+    ROOT_DIR = process.cwd();
 
 describe('config', function () {
     beforeEach(function () {
@@ -15,6 +16,10 @@ describe('config', function () {
         delete process.env.NODE_CONFIG_DIR;
         delete process.env.NODE_DEFAULT_ENV;
         process.chdir(FIXTURES_DIR);
+    });
+
+    afterEach(function () {
+        process.chdir(ROOT_DIR);
     });
 
     it('should use env.NODE_ENV as config environment', function () {
