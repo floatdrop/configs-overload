@@ -1,0 +1,36 @@
+{
+  "name": "configs-overload",
+  "version": "0.0.0",
+  "description": "Load configs with ease",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "istanbul cover node_modules/.bin/_mocha --report lcovonly --  --recursive tests/test.*.js -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floatdrop/configs-overload"
+  },
+  "keywords": [
+    "config",
+    "environment",
+    "overload",
+    "default"
+  ],
+  "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floatdrop/configs-overload/issues"
+  },
+  "homepage": "https://github.com/floatdrop/configs-overload",
+  "devDependencies": {
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "istanbul": "~0.2.6"
+  },
+  "dependencies": {
+    "node.extend": "~1.0.9"
+  }
+}

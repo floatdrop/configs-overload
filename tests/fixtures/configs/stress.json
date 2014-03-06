@@ -1,0 +1,9 @@
+{
+    "env": "stress",
+    "deep": {
+        "deep": {
+            "deep": ["stress"],
+            "foo": "bar"
+        }
+    }
+}
