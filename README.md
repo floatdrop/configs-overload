@@ -23,10 +23,10 @@ Consider, you have directory with following structure:
 And this code in application:
 
 ```js
-var config = require('configs-overload')('/configs', { env: 'production' });
+var config = require('configs-overload')('./configs', { env: 'production' });
 ```
 
-`configs-overoload` will load configs from `default.js` and extend them with object loaded `production.js`.
+`configs-overoload` will load configs from `default.js` and extend them with object loaded from `production.js`.
 
 ## API
 
