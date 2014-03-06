@@ -1,4 +1,6 @@
-# configs-overload [![Build Status](https://travis-ci.org/floatdrop/configs-overload.png?branch=master)](https://travis-ci.org/floatdrop/configs-overload)
+# configs-overload 
+[![NPM Version](https://badge.fury.io/js/configs-overload.png)] (https://npmjs.org/package/configs-overload) [![Build Status](https://travis-ci.org/floatdrop/configs-overload.png?branch=master)](https://travis-ci.org/floatdrop/configs-overload) [![Coverage Status](https://coveralls.io/repos/floatdrop/configs-overload/badge.png?branch=master)] (https://coveralls.io/r/floatdrop/configs-overload) [![Dependency Status](https://gemnasium.com/floatdrop/configs-overload.png)](https://gemnasium.com/floatdrop/configs-overload)
+
 > Load configs with ease
 
 ## Installation

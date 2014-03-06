@@ -1,4 +1,5 @@
-/*global describe, it, beforeEach */
+/*global describe, it, beforeEach*/
+/*jshint expr:true*/
 
 'use strict';
 
@@ -12,6 +13,7 @@ describe('config', function () {
         delete require.cache[require.resolve('..')];
         delete process.env.NODE_ENV;
         delete process.env.NODE_CONFIG_DIR;
+        delete process.env.NODE_DEFAULT_ENV;
         process.chdir(FIXTURES_DIR);
     });
 
@@ -127,7 +129,7 @@ describe('config', function () {
             process.env.NODE_CONFIG_DIR = path.join(FIXTURES_DIR, 'configs');
             var config = require('..')();
             config.extend({
-                regexps: [ /\t/ ]
+                regexps: [/\t/]
             });
             expect(config).to.be.eql({
                 'env': 'production',
@@ -138,7 +140,7 @@ describe('config', function () {
                         'bar': 'foo'
                     }
                 },
-                'regexps': [ /\t/ ]
+                'regexps': [/\t/]
             });
         });
 
