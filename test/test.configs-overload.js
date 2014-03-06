@@ -1,5 +1,4 @@
 /*global describe, it, beforeEach, afterEach*/
-/*jshint expr:true*/
 
 'use strict';
 
@@ -10,6 +9,7 @@ var FIXTURES_DIR = path.join(__dirname, 'fixtures'),
     ROOT_DIR = process.cwd();
 
 describe('config', function () {
+    /*jshint expr:true, maxstatements:13*/
     beforeEach(function () {
         delete require.cache[require.resolve('..')];
         delete process.env.NODE_ENV;
