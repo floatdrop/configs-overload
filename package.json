@@ -20,6 +20,10 @@
     "default"
   ],
   "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>",
+  "contributors" : [
+    "Mikhail Davydov <i@azproduction.ru>",
+    "Vsevolod Strukchinsky <floatdrop@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/floatdrop/configs-overload/issues"

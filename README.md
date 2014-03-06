@@ -26,7 +26,7 @@ And this code in application:
 var config = require('configs-overload')('/configs', { env: 'production' });
 ```
 
-`configs-overoload` will load configs from `default.js` and overwrite them by fileds from `production.js`.
+`configs-overoload` will load configs from `default.js` and extend them with object loaded `production.js`.
 
 ## API
 
