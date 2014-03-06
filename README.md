@@ -1,4 +1,4 @@
-# configs-overload
+# configs-overload [![Build Status](https://travis-ci.org/floatdrop/configs-overload.png?branch=master)](https://travis-ci.org/floatdrop/configs-overload)
 > Load configs with ease
 
 ## Installation
