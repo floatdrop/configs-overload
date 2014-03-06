@@ -48,7 +48,7 @@ Type: `Object`
 ## Environment variables
 
  * `NODE_CONFIG_DIR` - default directory, if it not specified in options.
- * `DEFAULT_ENV` - "default" environment name
+ * `NODE_DEFAULT_ENV` - "default" environment name
  * `NODE_ENV` - environment name
 
 ## Methods
