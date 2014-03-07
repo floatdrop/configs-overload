@@ -23,6 +23,8 @@ var softRequire = function (entity) {
  * Merges config with configs in passed config directory
  *
  * @param {String} directory
+ * @param {String} defaultEnv
+ * @param {String} environment
  * @returns {*} config
  */
 var loadDirectory = function (directory, defaultEnv, environment) {

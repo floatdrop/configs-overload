@@ -1,18 +1,25 @@
-/*global describe, it, beforeEach */
+/*global describe, it, beforeEach, afterEach*/
 
 'use strict';
 
 var path = require('path'),
     expect = require('chai').expect;
 
-var FIXTURES_DIR = path.join(__dirname, 'fixtures');
+var FIXTURES_DIR = path.join(__dirname, 'fixtures'),
+    ROOT_DIR = process.cwd();
 
 describe('config', function () {
+    /*jshint expr:true, maxstatements:13*/
     beforeEach(function () {
         delete require.cache[require.resolve('..')];
         delete process.env.NODE_ENV;
         delete process.env.NODE_CONFIG_DIR;
+        delete process.env.NODE_DEFAULT_ENV;
         process.chdir(FIXTURES_DIR);
+    });
+
+    afterEach(function () {
+        process.chdir(ROOT_DIR);
     });
 
     it('should use env.NODE_ENV as config environment', function () {
@@ -127,7 +134,7 @@ describe('config', function () {
             process.env.NODE_CONFIG_DIR = path.join(FIXTURES_DIR, 'configs');
             var config = require('..')();
             config.extend({
-                regexps: [ /\t/ ]
+                regexps: [/\t/]
             });
             expect(config).to.be.eql({
                 'env': 'production',
@@ -138,7 +145,7 @@ describe('config', function () {
                         'bar': 'foo'
                     }
                 },
-                'regexps': [ /\t/ ]
+                'regexps': [/\t/]
             });
         });
 
