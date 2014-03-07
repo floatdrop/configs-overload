@@ -44,8 +44,8 @@ Path to directory with config files.
 
 Type: `Object`
 
- * `defaultEnv` - name of default environment, which will be overloaded with current environment (default: `default`)
- * `env` - Environment name which will override `defaultEnv`.
+ * `defaultEnv` - name of default environment, which will be overloaded with current environment (default: `process.env.NODE_DEFAULT_ENV` or `default`)
+ * `env` - Environment name which will override `defaultEnv` (default: `process.env.NODE_ENV` or `defaultEnv`).
 
 ## Environment variables
 
@@ -64,7 +64,7 @@ Type: `Object`
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Vsevolod Strukchinsky and other [contributors](https://github.com/floatdrop/configs-overload/blob/master/CONTRIBUTORS)
+Copyright (c) 2014 Vsevolod Strukchinsky and other [contributors](https://github.com/floatdrop/configs-overload/blob/master/CONTRIBUTORS.md)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
