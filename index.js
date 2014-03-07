@@ -28,6 +28,9 @@ var softRequire = function (entity) {
  * @returns {*} config
  */
 var loadDirectory = function (directory, defaultEnv, environment) {
+    defaultEnv = defaultEnv || 'default';
+    environment = environment || defaultEnv;
+
     var config = Object.create({}, /** @lends config */ {
         extend: {
             get: function () {
@@ -83,11 +86,11 @@ var loadDirectory = function (directory, defaultEnv, environment) {
 };
 
 module.exports = function (configsDirectory, options) {
-    configsDirectory = configsDirectory || process.env.NODE_CONFIG_DIR || path.join(process.cwd(), 'configs');
+    configsDirectory = configsDirectory || process.env.NODE_CONFIG_DIR;
 
     options = options || {};
-    options.defaultEnv = options.defaultEnv || process.env.NODE_DEFAULT_ENV || 'default';
-    options.env = options.env || process.env.NODE_ENV || options.defaultEnv;
+    options.defaultEnv = options.defaultEnv || process.env.NODE_DEFAULT_ENV;
+    options.env = options.env || process.env.NODE_ENV;
 
     return loadDirectory(configsDirectory, options.defaultEnv, options.env);
 };
