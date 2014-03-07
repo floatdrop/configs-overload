@@ -13,4 +13,5 @@ branches:
   only:
     - master
 
-script: make travis
+after_script:
+  - npm run coveralls

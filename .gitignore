@@ -13,7 +13,5 @@ logs
 results
 
 npm-debug.log
-coverage.html
-html-report
-lib-cov
+coverage
 node_modules

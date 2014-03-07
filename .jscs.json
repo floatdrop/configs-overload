@@ -2,7 +2,8 @@
     "excludeFiles": [
         ".git/**",
         "node_modules/**",
-        "test/fixtures/**"
+        "test/fixtures/**",
+        "coverage/**"
     ],
 
     "requireCurlyBraces": ["if", "else", "for", "while", "do"],
