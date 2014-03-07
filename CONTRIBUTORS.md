@@ -1,2 +1,4 @@
-Vsevolod Strukchinsky <floatdrop@gmail.com>
-Mikhail Davydov <i@azproduction.ru>
+# Contributors
+
+ * Vsevolod Strukchinsky <floatdrop@gmail.com>
+ * Mikhail Davydov <i@azproduction.ru>
