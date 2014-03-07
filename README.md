@@ -3,6 +3,8 @@
 
 > Load configs with ease
 
+This package helps you to organize your configurations and load them on per-environment basis. Also it have default file, which reduce amount of repetative key-value pairs between configuration files. 
+
 ## Installation
 
 `npm install configs-overload`
