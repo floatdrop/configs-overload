@@ -1,6 +1,6 @@
 {
   "name": "configs-overload",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Load configs with ease",
   "scripts": {
     "test": "jshint . && jscs . && mocha -R spec",
