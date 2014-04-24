@@ -28,7 +28,7 @@ var softRequire = function (entity) {
  * @returns {*} config
  */
 var loadDirectory = function (directory, defaultEnv, environment) {
-    directory = path.resolve(directory) || path.join(process.cwd(), 'configs');
+    directory = directory ? path.resolve(directory) : path.join(process.cwd(), 'configs');
     defaultEnv = defaultEnv || 'default';
     environment = environment || defaultEnv;
 
