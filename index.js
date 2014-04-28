@@ -75,13 +75,14 @@ var loadDirectory = function (directory, defaultEnv, environment) {
     };
 
     return [defaultEnv, environment].reduce(function (config, name) {
+        var configPath = path.join(directory, name);
         try {
-            extend(true, config, require(path.join(directory, name)));
+            require.resolve(configPath);
         } catch (e) {
-            if (e && e.code !== 'MODULE_NOT_FOUND' && defaultEnv !== name) {
-                throw e;
-            }
+            /*module not found*/
+            return config;
         }
+        extend(true, config, require(configPath));
         return config;
     }, config);
 };

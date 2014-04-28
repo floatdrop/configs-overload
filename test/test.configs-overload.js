@@ -9,7 +9,7 @@ var FIXTURES_DIR = path.join(__dirname, 'fixtures'),
     ROOT_DIR = process.cwd();
 
 describe('config', function () {
-    /*jshint expr:true, maxstatements:13*/
+    /*jshint expr:true, maxstatements:14*/
     beforeEach(function () {
         delete require.cache[require.resolve('..')];
         delete process.env.NODE_ENV;
@@ -92,6 +92,14 @@ describe('config', function () {
         expect(require('..')()).to.be.eql({
             ok: true
         });
+    });
+
+    it('should exception when embeded config use require and module nod found', function () {
+        process.env.NODE_ENV = 'production';
+        process.env.NODE_CONFIG_DIR = path.join(FIXTURES_DIR, 'inner-require');
+        expect(function () {
+            require('..')();
+        }).to.throw(Error);
     });
 
     describe('.extend(args)', function () {
