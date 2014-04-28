@@ -94,7 +94,7 @@ describe('config', function () {
         });
     });
 
-    it('should exception when embeded config use require and module nod found', function () {
+    it('should throw exception when embeded config throws', function () {
         process.env.NODE_ENV = 'production';
         process.env.NODE_CONFIG_DIR = path.join(FIXTURES_DIR, 'inner-require');
         expect(function () {
